@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <style>
+        form{
+            background-color: green;
+            width: 300px;
+            height: 400px;
+            border-radius: 8px;
+        font-family: blue;
+        }
+        form input{
+            border: 0;
+            background-color: white;
+            padding: 4px;
+            margin: 15px;
+        }
+        body{
+            background-image: url(./nature.jfif);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+        button{
+            background-color:yellow;
+            padding: 4px;
+            width: 170px;
+            font-size: large;
+
+        }
+        h1{
+            padding: 10px;
+        }
+    </style>
+    <center>
+    <form action="">
+        <h1>FORM</h1>
+ 
+    <input type="text" placeholder="enter your name" name="name" id="name" ><br><br>
+    <input type="password" placeholder="enter your password" id="password" name="pass"><br><br>
+    <input type="number" name="score" placeholder="enter your score" id="score"><br><br>
+    <button type="button" onclick="validateForm()">login</button>
+
+</form>
+</center>
+    <script>
+        function validateForm(){
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            var score = document.getElementById("score").value;
+
+ 
+            var errormessage="";
+            result = 250;
+
+            switch(true){
+                case(name==""):
+                errormessage="name is required";
+                break;
+                case(password==""):
+                errormessage="password is required";
+                break;
+                case(score < result):
+                errormessage="register next year";
+                break;
+                default:
+                    alert("form submitted");
+            }
+            if(errormessage){
+                alert(errormessage);
+            }
+        }
+    </script>
+</body>
+</html> 
